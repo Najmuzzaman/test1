@@ -13,13 +13,19 @@ function changeColortoGreen() {
 function changeColor(color) {
     document.body.style.backgroundColor = color;
 }
-
-function add(a,b) {
+a=10
+function add(a,b) {    
     document.getElementById("content").innerHTML = "add of "+ a +" and "+ b +" is "+ (a + b);
     console.log(a + b);
-    return a+b
+    return a+b;
 }
-function minus(a,b) {
+
+minus = (a,b) => {
     document.getElementById("content").innerHTML = "minus of "+a+" and "+b+" is "+ (a - b);
     console.log(a - b);
+}
+
+muliptly = (a,b) => {
+    document.getElementById("content").innerHTML = "multiply of "+a+" and "+b+" is "+ (a * b);
+    console.log(a * b);
 }
