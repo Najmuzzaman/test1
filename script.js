@@ -1,31 +1,41 @@
-function showAlert() {
-    alert("Button clicked!");
+function showTitle() {
+    alert(document.getElementById('main-title').innerText);
+}
+function ChangeTitle() {
+    const title=document.getElementById('main-title');
+    title.textContent = 'New Title!';
+    console.log('chnage title by getElementById');
 }
 
-function changeColortoRed() {
-    document.body.style.backgroundColor = "red";
+function showMessage() {
+    //const message = document.querySelector('.message');
+    const message = document.getElementsByClassName('message');
+    alert(message.length);
+    //alert(message[0].innerText);
 }
 
-function changeColortoGreen() {
-    document.body.style.backgroundColor = "green";
+function getbyTagName(tagName) {
+    const message = document.getElementsByTagName(tagName);
+    var text=document.getElementById('input-field').value;
+    message[0].innerText = text;
+    message[0].style.color = 'red';
+    console.log('tag function called and innertext changed inputed text');
 }
 
-function changeColor(color) {
-    document.body.style.backgroundColor = color;
+function changeTitle() {
+    const title = document.getElementById('main-title');
+    title.innerText = 'Hello World!';
+    alert('Title changed!');
 }
-a=10
-function add(a,b) {    
-    document.getElementById("content").innerHTML = "add of "+ a +" and "+ b +" is "+ (a + b);
-    console.log(a + b);
-    return a+b;
-}
-
-minus = (a,b) => {
-    document.getElementById("content").innerHTML = "minus of "+a+" and "+b+" is "+ (a - b);
-    console.log(a - b);
+function backgroundcolorchangewithtag(tagname,colorname) {
+    const message = document.getElementsByTagName(tagname);
+    for (let i = 0; i < message.length; i++) {
+        message[i].style.backgroundColor = colorname;
+    }    
+    console.log('background color changed to '+colorname+" and tagname is "+tagname); 
 }
 
-muliptly = (a,b) => {
-    document.getElementById("content").innerHTML = "multiply of "+a+" and "+b+" is "+ (a * b);
-    console.log(a * b);
+function backgroundcolorchange(colorname) {
+    document.body.style.backgroundColor = colorname;
+    console.log('background color changed to '+colorname);
 }

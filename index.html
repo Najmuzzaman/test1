@@ -1,19 +1,52 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title>My Web Page</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">   
+  <head>
+    <title>DOM Example</title>
+    <meta attribute-name="”"value">
     <script src="script.js"></script>
-</head>
-    <body >
-    <h1>Welcome to My Web Page</h1>
-    <p>This is a simple web page.</p>
-    <p>Click the button to see a message:</p>
-    <button onclick="muliptly(1,2)">Add(+)</button>
-    <button onclick="minus(2,3)">Minus(-)</button>
-    <p id="result">Result</p>
-    <div id="content"></div>
-    <h2>My List</h2>
-    <p>arggawegaee</p>
-    
-    </body>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="main-title">Hello DOM!</h1>
+    <strong>Strong</strong>
+    <p class="message">Welcome to the DOM world.</p>
+
+    <p class="message">Welcome to the DOM world1.</p>
+    <input type="text" id="input-field" placeholder="Type something...">
+    <button id="change-text" onclick="getbyTagName('h1')">h1 Tag Value Change</button>
+    <button id="change-text" onclick="getbyTagName('p')">P Tag Value Change</button>
+    <button id="change-text" onclick="getbyTagName('strong')">strong Value Change</button>
+
+    <button id="change-text" onclick="backgroundcolorchange('green')">Backgroup color Change to green</button><br/>
+    <button id="change-text" onclick="backgroundcolorchange('yellow')">Backgroup color Change to yellow</button><br/>
+    <button id="change-text" onclick="backgroundcolorchange('white')">Backgroup color Change to white</button><br/>
+  
+
+    <button id="change-text" onclick="backgroundcolorchangewithtag('p','green')">P tag Backgroup color Change to green</button><br/>
+    <button id="change-text" onclick="backgroundcolorchangewithtag('p','yellow')">P tag Backgroup color Change to yellow</button><br/>
+    <button id="change-text" onclick="backgroundcolorchangewithtag('p','white')">P Backgroup color Change to white</button><br/>
+  
+    <div>
+        <h2>List of Items</h2>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="item-list">
+            <tr>
+                <td>Item 1</td>
+                <td>$10</td>
+            </tr>
+            <tr>
+                <td>Item 2</td>
+                <td>$20</td>
+            </tr>
+    </table>
+   
+  </body>
 </html>
+    
